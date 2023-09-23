@@ -95,23 +95,8 @@
         <!-- Header Start -->
         <div class="jumbotron jumbotron-fluid position-relative overlay-bottom" style="margin-bottom: 90px;">
             <div class="container text-center my-5 py-5">
-                <h1 class="text-white mt-4 mb-4">Learn From Home</h1>
-                <h1 class="text-white display-1 mb-5">Education Courses</h1>
-                <div class="mx-auto mb-5" style="width: 100%; max-width: 600px;">
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <button class="btn btn-outline-light bg-white text-body px-4 dropdown-toggle" type="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">Courses</button>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Courses 1</a>
-                                <a class="dropdown-item" href="#">Courses 2</a>
-                                <a class="dropdown-item" href="#">Courses 3</a>
-                            </div>
-                        </div>
-                        <input type="text" class="form-control border-light" style="padding: 30px 25px;" placeholder="Keyword">
-                        <div class="input-group-append">
-                            <button class="btn btn-secondary px-4 px-lg-5">Search</button>
-                        </div>
+                <h1 class="text-white mt-4 mb-4">Sign Up</h1>
+                <h1 class="text-white display-1 mb-5">Company Registration</h1>
                     </div>
                 </div>
             </div>
@@ -142,77 +127,91 @@
         <div class="row mb-5">
             <div class="col-lg-12">
             <form class="p-4 p-md-5 border rounded" method="post">
-            <h3 class="text-black mb-5 border-bottom pb-2">Job Details</h3>
-            <div class="form-group">
-            <label for="company-website-tw d-block">Upload Featured Image</label> <br>
-            <label class="btn btn-primary btn-md btn-file">
-            Browse File<input type="file" hidden>
-            </label>
-            </div>
-            <div class="form-group">
-            <label for="email">Email</label>
-            <input type="text" class="form-control" id="email" placeholder="you@yourdomain.com">
-            </div>
-            <div class="form-group">
-            <label for="job-title">Job Title</label>
-            <input type="text" class="form-control" id="job-title" placeholder="Product Designer">
-            </div>
-            <div class="form-group">
-            <label for="job-location">Location</label>
-            <input type="text" class="form-control" id="job-location" placeholder="e.g. New York">
-            </div>
-            <div class="form-group">
-            <label for="job-region">Job Region</label>
-            <select class="selectpicker border rounded" id="job-region" data-style="btn-black" data-width="100%" data-live-search="true" title="Select Region">
-            <option>Anywhere</option>
-            <option>San Francisco</option>
-            <option>Palo Alto</option>
-            <option>New York</option>
-            <option>Manhattan</option>
-            <option>Ontario</option>
-            <option>Toronto</option>
-            <option>Kansas</option>
-            <option>Mountain View</option>
-            </select>
-            </div>
-            <div class="form-group">
-            <label for="job-type">Job Type</label>
-            <select class="selectpicker border rounded" id="job-type" data-style="btn-black" data-width="100%" data-live-search="true" title="Select Job Type">
-            <option>Part Time</option>
-            <option>Full Time</option>
-            </select>
-            </div>
-            <div class="form-group">
-            <label for="job-description">Job Description</label>
-            <div class="editor" id="editor-1">
-            <p>Write Job Description!</p>
-            </div>
-            </div>
             <h3 class="text-black my-5 border-bottom pb-2">Company Details</h3>
             <div class="form-group">
-            <label for="company-name">Company Name</label>
-            <input type="text" class="form-control" id="company-name" placeholder="e.g. Your company name">
+            <label for="company-name">Company Name *</label>
+            <input type="text" class="form-control" id="company-name">
+            </div>
+            <div class="form-group">
+            <label for="company-address">Company Address *</label>
+            <input type="text" class="form-control" id="company-address" >
+            </div>
+            <div class="form-group">
+            <label for="company-contact">Contact Number *</label>
+            <input type="text" class="form-control" id="company-contact" placeholder="03-6123 9999">
+            </div>
+            <div class="form-group">
+            <label for="company-email">Email *</label>
+            <input type="text" class="form-control" id="company-email" placeholder="abc@company.com">
             </div>
             <div class="form-group">
             <label for="job-description">Company Description (Optional)</label>
             <div class="editor" id="editor-2">
-            <p>Description</p>
+            <textarea name class="form-control" id cols="30" rows="6"></textarea>
+
             </div>
             </div>
             <div class="form-group">
             <label for="company-website">Website (Optional)</label>
             <input type="text" class="form-control" id="company-website" placeholder="https://">
             </div>
-        
-            <div class="form-group">
-            <label for="company-website-tw d-block">Upload Logo</label> <br>
+            <div class="form-group">                <label for="company-website-tw d-block">Company Logo *</label> <br>
             <label class="btn btn-primary btn-md btn-file">
-            Browse File<input type="file" hidden>
+            Upload picture<input type="file" hidden>
             </label>
             </div>
             </form>
             </div>
+            </div> 
+            
+        <div class="row mb-5">
+            <div class="col-lg-12">
+            <form class="p-4 p-md-5 border rounded" method="post">    
+            <h3 class="text-black mb-5 border-bottom pb-2">Job Details</h3>
+    
+            <div class="form-group">
+            <label for="job-title">Job Title *</label>
+            <input type="text" class="form-control" id="job-title" placeholder="">
             </div>
+ 
+            <div class="form-group">
+            <label for="job-type">Job Type *</label>
+            <!-- <div class="ss-custom-select">
+                <select class="u-fullwidth" id="job-type" name="job-type">
+                    <option value="Full Time">Full Time</option>
+                    <option value="Part Time">Part Time</option>
+                    <option value="Internship">Internship</option>
+                </select> -->
+            
+
+
+            <div class="col-md-12 mb-3 mb-md-0">
+                <label for="option-job-type-1">
+                <input type="radio" id="option-job-type-1" name="job-type"> Full Time
+                </label>
+            </div>
+
+            <div class="col-md-12 mb-3 mb-md-0">
+                <label for="option-job-type-1">
+                <input type="radio" id="option-job-type-1" name="job-type"> Part Time
+                </label>
+            </div>
+
+            <div class="col-md-12 mb-3 mb-md-0">
+                <label for="option-job-type-1">
+                <input type="radio" id="option-job-type-1" name="job-type"> Internship
+                </label>
+            </div>
+    
+            </div>
+            <div class="form-group">
+            <label for="job-description">Job Description *</label>
+            <div class="editor" id="editor-1">
+            <textarea name class="form-control" id cols="30" rows="8"></textarea>
+
+            </div>
+            </div>
+           
             <div class="row align-items-center mb-5">
             <div class="col-lg-4 ml-auto">
             <div class="row">
